@@ -32,7 +32,7 @@ export default function(app) {
       if (appIds.length > 100) {
         throw new Error('length <= 100 please')
       }
-      return getAppsByIds(appIds)
+      return getAppsByIds(appIds, ctx.request.query.extend === '1')
     })
   )
 }
