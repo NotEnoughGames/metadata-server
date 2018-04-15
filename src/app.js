@@ -26,7 +26,7 @@ app.use(async (ctx, next) => {
   }
   if (!ctx.body) {
     ctx.response.type = 'application/json'
-    const body = JSON.stringify(result, null, 2)
+    const body = JSON.stringify(result)
     if (body === undefined) {
       ctx.body = 'null'
     } else {
