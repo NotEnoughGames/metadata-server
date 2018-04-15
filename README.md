@@ -8,3 +8,8 @@ NotEnoughGames 的 Steam 库元数据服务。它连接 SteamDatabase 的数据�
 docker build -t metadata-server
 docker run -v config.js:/app/config.js --rm metadata-server
 ```
+
+## 文档
+
+* [API 参考](docs/API.md)
+* [App 类型参考](docs/AppTypes.md)
