@@ -11,5 +11,8 @@ module.exports = {
   },
   server: {
     port: 3011
+  },
+  auth: {
+    token: '!!! You Should Change This !!!'
   }
 }

@@ -4,6 +4,7 @@ import bodyParser from 'koa-bodyparser'
 import config from './config'
 
 import MetaRoute from './routes/meta'
+import QueueRoute from './routes/queue'
 
 const app = new Koa()
 app.use(cors())
@@ -36,6 +37,7 @@ app.use(async (ctx, next) => {
 })
 
 MetaRoute(app)
+QueueRoute(app)
 
 app.listen(config.server.port, () => {
   console.log(`Server listend at ${config.server.port}`)
