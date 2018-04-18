@@ -42,7 +42,10 @@ export default function(app) {
 const tokenBuffer = Buffer.from(config.auth.token)
 
 function authRequired(ctx) {
-  if (ctx.request.header.token.length !== config.auth.token.length) {
+  if (
+    !ctx.request.header.token ||
+    ctx.request.header.token.length !== config.auth.token.length
+  ) {
     throw new Error('Unauthorized')
   }
   if (
